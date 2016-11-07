@@ -5,14 +5,51 @@
  	<script src="bitcoin.js"></script>
 	<script src="app/app.js"></script>
 
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
+
+<img src="img/precogs.png" style="width:200px;">
+<br>
+<br>
+<br>
+<br>
 
 
 Kikooo
 
 Ton adress privée est : <input id="addressPrivate" type="text">; la public est : <input id="addressPublic" type="text">
+
+<br>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">Transaction number : <input id="transactionNumber" type="text" size="35" value=""> <input id="goTransaction" type="button" value="Go"></div>
+  <div class="col-md-4"></div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+  <table class="table table-striped">
+    <tr><th>Chip</th><th>Historic</th></tr>
+    <tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
+    <tr><td>Atmel E70</td>  <td align="left">Atmel -> AVNet -> You</td></tr>
+    <tr><td>LPC1768</td>    <td align="left">NXP -> Arrow -> You</td></tr>
+    <tr><td>SI5324</td>     <td align="left">Silicon labs -> AVNet -> Philips -> You</td></tr>
+    <tr><td>SI570</td>      <td align="left">Silicon labs -> AVNet -> Arrow -> You</td></tr>
+  </table>
+  </div>
+  <div class="col-md-1"></div>
+</div>
 
 
 <script>
@@ -22,9 +59,14 @@ window.onload = function() {
     //test();
     initApp();
 
-    
+
     $("#addressPublic").val(getPublicKey());
     $("#addressPrivate").val(getPrivateKey());
+
+    $("#addChipBtn").click(function(){
+
+    	alert("kikoo");
+    })
 
 };
 
