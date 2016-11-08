@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
  	<script src="node_modules/jquery/dist/jquery.min.js"></script>
  	<script src="bitcoin.js"></script>
-	<script src="app/app.js"></script>
+  <script src="app/app.js"></script>
 
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
@@ -17,9 +17,9 @@
 <br>
 
 
-Kikooo
+<!--Kikooo
 
-Ton adress privée est : <input id="addressPrivate" type="text">; la public est : <input id="addressPublic" type="text">
+Ton adress privée est : <input id="addressPrivate" type="text">; la public est : <input id="addressPublic" type="text">-->
 
 <br>
 <br>
@@ -39,7 +39,7 @@ Ton adress privée est : <input id="addressPrivate" type="text">; la public est 
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10">
-  <table class="table table-striped">
+  <table id="transactionTable" class="table table-striped">
     <tr><th>Chip</th><th>Historic</th></tr>
     <tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
     <tr><td>Atmel E70</td>  <td align="left">Atmel -> AVNet -> You</td></tr>
@@ -60,12 +60,30 @@ window.onload = function() {
     initApp();
 
 
-    $("#addressPublic").val(getPublicKey());
-    $("#addressPrivate").val(getPrivateKey());
+    /*$("#addressPublic").val(getPublicKey());
+    $("#addressPrivate").val(getPrivateKey());*/
 
-    $("#addChipBtn").click(function(){
+    $("#goTransaction").click(function(){
 
-    	alert("kikoo");
+      transaction = getPrecogsTransactionById( $("#transactionNumber").val() );
+
+      if( transaction != null )
+      {
+        //alert("kikoo " + $("#transactionNumber").val() );
+        //alert( transaction.content )
+
+        for(var i=0; i<transaction.blockChainTransactions.length; i++ ){
+
+          var tr="<tr>";
+          var td1="<td>"+transaction.blockChainTransactions[i]+"</td>";
+          var td2="<td  align=\"left\">"+"path of the chips"+"</td>";
+          var trend="</tr>";
+
+          $("#transactionTable").append(tr+td1+td2+trend); 
+
+        }
+      }
+
     })
 
 };
