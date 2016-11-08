@@ -1,0 +1,16 @@
+{
+  "companies": [
+    {
+      "name": "AVNet",
+      "bcAddress": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS"
+    },
+    {
+      "name": "Philips",
+      "bcAddress": "1Huky74UcCnAnf5v5yHRF2Jt87eYy16X8f"
+    },
+    {
+      "name": "Atmel",
+      "bcAddress": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd"
+    }
+  ]
+}

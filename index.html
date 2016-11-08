@@ -72,15 +72,18 @@ window.onload = function() {
         //alert("kikoo " + $("#transactionNumber").val() );
         //alert( transaction.content )
 
+        $("#transactionTable tr").remove();
+
         for(var i=0; i<transaction.blockChainTransactions.length; i++ ){
 
+          var bctransaction = getblockChainTransactionById( transaction.blockChainTransactions[i] );
+
           var tr="<tr>";
-          var td1="<td>"+transaction.blockChainTransactions[i]+"</td>";
-          var td2="<td  align=\"left\">"+"path of the chips"+"</td>";
+          var td1="<td>"+bctransaction.asset+"</td>";
+          var td2="<td  align=\"left\">"+pathToHere(bctransaction)+"</td>";
           var trend="</tr>";
 
           $("#transactionTable").append(tr+td1+td2+trend); 
-
         }
       }
 
