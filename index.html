@@ -12,7 +12,7 @@
 
 <body>
 
-<img src="img/precogs.png" style="width:200px;">
+<img src="img/precogs.png" style="position:absolute; top:0px; left:0px; width:200px;">
 <br>
 <br>
 <br>
@@ -23,32 +23,34 @@
 
 Ton adress privée est : <input id="addressPrivate" type="text">; la public est : <input id="addressPublic" type="text">-->
 
-<br>
 
-<div style="text-align: center; font-size: 20px;">To start using this application, please enter your precogs transaction number (it looks like : 457852264485256561252454).</div>
+<div id="controlHeader">
+  <div style="text-align: center; font-size: 20px;">To start using this application, please enter your precogs transaction number (it looks like : 457852264485256561252454).</div>
 
-<br>
+  <br>
 
-<div class="center-block" style="float:none; text-align: center;">Transaction number : <input id="transactionNumber" type="text" size="35" value=""> <button id="goTransaction" type="button" class="btn btn-primary">Go</button></div>
+  <div class="center-block" style="float:none; text-align: center;">Transaction number : <input id="transactionNumber" type="text" size="35" value=""> <button id="goTransaction" type="button" class="btn btn-primary">Go</button></div>
+</div>
 
 
-<br>
-<br>
-<br>
-
-<div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-  <table id="transactionTable" class="table table-striped">
-    <tr><th>Chip</th><th>Historic</th></tr>
-    <!--<tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
-    <tr><td>Atmel E70</td>  <td align="left">Atmel -> AVNet -> You</td></tr>
-    <tr><td>LPC1768</td>    <td align="left">NXP -> Arrow -> You</td></tr>
-    <tr><td>SI5324</td>     <td align="left">Silicon labs -> AVNet -> Philips -> You</td></tr>
-    <tr><td>SI570</td>      <td align="left">Silicon labs -> AVNet -> Arrow -> You</td></tr>-->
-  </table>
+<div id="transactionDetails" class="hidden">
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <table id="transactionTable" class="table table-striped">
+      <tr><th>Chip</th><th>Historic</th></tr>
+      <!--<tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
+      <tr><td>Atmel E70</td>  <td align="left">Atmel -> AVNet -> You</td></tr>
+      <tr><td>LPC1768</td>    <td align="left">NXP -> Arrow -> You</td></tr>
+      <tr><td>SI5324</td>     <td align="left">Silicon labs -> AVNet -> Philips -> You</td></tr>
+      <tr><td>SI570</td>      <td align="left">Silicon labs -> AVNet -> Arrow -> You</td></tr>-->
+    </table>
+    </div>
+    <div class="col-md-1"></div>
   </div>
-  <div class="col-md-1"></div>
 </div>
 
 
@@ -89,6 +91,7 @@ window.onload = function() {
           var trend="</tr>";
 
           $("#transactionTable").append(tr+td1+td2+trend);
+          $("#transactionDetails").removeClass('hidden');
           $('[data-toggle="tooltip"]').tooltip();
         }
       }

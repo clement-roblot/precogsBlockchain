@@ -1,7 +1,41 @@
 
 
+html,body {
+  height:100%;
+  width: 100%; 
+  margin: 0 auto;
+  padding-top: 00px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .companieIcon{
 
 	height: 30px;
+}
+
+
+#controlHeader{
+
+  /*animation: pulse 5s infinite;*/
+  /*transition: all 1s ease-in-out;*/
+}
+
+
+#transactionTable{
+
+  /*animation: pulse 5s infinite;*/
+  /*transition: all 1s ease-in-out;*/
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
 }
