@@ -130,7 +130,7 @@ function pathToHere(bctransaction){
             newElement = companieFrom.name;
 
 
-        newElement += " <span class=\"glyphicon glyphicon-arrow-right\"></span> ";
+        newElement += " <span class=\"glyphicon glyphicon-arrow-right\" data-toggle=\"tooltip\" title=\""+currentTransaction.date+"\"></span> ";
 
         path = newElement + path;
 

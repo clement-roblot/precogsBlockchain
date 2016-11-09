@@ -2,6 +2,7 @@
 <head>
 	<meta charset="UTF-8">
  	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
  	<script src="bitcoin.js"></script>
   <script src="app/app.js"></script>
 
@@ -55,8 +56,12 @@ Ton adress privée est : <input id="addressPrivate" type="text">; la public est 
 
 window.onload = function() {
  
-    //test();
+
     initApp();
+
+
+
+
 
 
     /*$("#addressPublic").val(getPublicKey());
@@ -83,7 +88,8 @@ window.onload = function() {
           var td2="<td  align=\"left\">"+pathToHere(bctransaction)+"</td>";
           var trend="</tr>";
 
-          $("#transactionTable").append(tr+td1+td2+trend); 
+          $("#transactionTable").append(tr+td1+td2+trend);
+          $('[data-toggle="tooltip"]').tooltip();
         }
       }
 
