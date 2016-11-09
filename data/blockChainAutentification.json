@@ -2,15 +2,18 @@
   "companies": [
     {
       "name": "AVNet",
-      "bcAddress": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS"
+      "bcAddress": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
+      "icon": "http://www.avnet.com/style%20library/avnet/common/images/logo.png"
     },
     {
       "name": "Philips",
-      "bcAddress": "1Huky74UcCnAnf5v5yHRF2Jt87eYy16X8f"
+      "bcAddress": "1Huky74UcCnAnf5v5yHRF2Jt87eYy16X8f",
+      "icon": "http://www.qdsegypt.com/images/logo/philips_logo.gif"
     },
     {
-      "name": "Atmel",
-      "bcAddress": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd"
+      "name": "Microchip",
+      "bcAddress": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd",
+      "icon": "http://logos-download.com/wp-content/uploads/2016/09/Microchip_logo.png"
     }
   ]
 }

@@ -105,6 +105,7 @@ function getCompanieByAddress(address){
 }
 
 
+
 function pathToHere(bctransaction){
 
     var path = "";
@@ -112,11 +113,23 @@ function pathToHere(bctransaction){
 
     var currentTransaction = bctransaction;
 
-    path += getCompanieByAddress(currentTransaction.to).name;
+    var lastCompanie = getCompanieByAddress(currentTransaction.to)
+    if (lastCompanie.icon != "" )
+        path += "<img class=\"companieIcon\" src=\""+lastCompanie.icon+"\"></img>";
+    else
+        path += lastCompanie.name;
 
     while(loopTransactions == true)
     {
-        var newElement = getCompanieByAddress(currentTransaction.from).name;
+        var companieFrom = getCompanieByAddress(currentTransaction.from);
+
+        var newElement = "";
+        if (companieFrom.icon != "" )
+            newElement = "<img class=\"companieIcon\" src=\""+companieFrom.icon+"\"></img>";
+        else
+            newElement = companieFrom.name;
+
+
         newElement += " <span class=\"glyphicon glyphicon-arrow-right\"></span> ";
 
         path = newElement + path;
