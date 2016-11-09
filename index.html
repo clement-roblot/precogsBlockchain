@@ -22,9 +22,13 @@
 Ton adress privée est : <input id="addressPrivate" type="text">; la public est : <input id="addressPublic" type="text">-->
 
 <br>
+
+<div style="text-align: center; font-size: 20px;">To start using this application, please enter your precogs transaction number (it looks like : 457852264485256561252454).</div>
+
 <br>
 
 <div class="center-block" style="float:none; text-align: center;">Transaction number : <input id="transactionNumber" type="text" size="35" value=""> <button id="goTransaction" type="button" class="btn btn-primary">Go</button></div>
+
 
 <br>
 <br>
@@ -35,11 +39,11 @@ Ton adress privée est : <input id="addressPrivate" type="text">; la public est 
   <div class="col-md-10">
   <table id="transactionTable" class="table table-striped">
     <tr><th>Chip</th><th>Historic</th></tr>
-    <tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
+    <!--<tr><td>555</td>        <td align="left">NXP -> AVNet -> You</td></tr>
     <tr><td>Atmel E70</td>  <td align="left">Atmel -> AVNet -> You</td></tr>
     <tr><td>LPC1768</td>    <td align="left">NXP -> Arrow -> You</td></tr>
     <tr><td>SI5324</td>     <td align="left">Silicon labs -> AVNet -> Philips -> You</td></tr>
-    <tr><td>SI570</td>      <td align="left">Silicon labs -> AVNet -> Arrow -> You</td></tr>
+    <tr><td>SI570</td>      <td align="left">Silicon labs -> AVNet -> Arrow -> You</td></tr>-->
   </table>
   </div>
   <div class="col-md-1"></div>
@@ -67,6 +71,7 @@ window.onload = function() {
         //alert( transaction.content )
 
         $("#transactionTable tr").remove();
+        $("#transactionTable").append("<tr><th>Chip</th><th>Historic</th></tr>");
 
         for(var i=0; i<transaction.blockChainTransactions.length; i++ ){
 
