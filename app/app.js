@@ -116,7 +116,10 @@ function pathToHere(bctransaction){
 
     while(loopTransactions == true)
     {
-        path = getCompanieByAddress(currentTransaction.from).name + " -> " + path;
+        var newElement = getCompanieByAddress(currentTransaction.from).name;
+        newElement += " <span class=\"glyphicon glyphicon-arrow-right\"></span> ";
+
+        path = newElement + path;
 
         if( currentTransaction.previusTx != "" )
         {
