@@ -1,10 +1,71 @@
 {
   "transactions": [
-
     {
       "id": "76aa18218d5df9fdac106cfac243aba021432f7f7b7e4b75b421ea53836d8bfc",
       "previusTx": "fdc20ba4ea48e8be3daaf689498783a1e2d901daa432d2772495d29ac61ce511",
-      "asset": "ATSAME70Q21",
+      "asset": {
+        "name": "Atmel E70",
+        "features": {
+          "Core": [
+            "ARM Cortex-M7 running at up to 300 MHz(1)",
+            "16 Kbytes of ICache and 16 Kbytes of DCache with Error Code Correction (ECC)",
+            "Simple- and double-precision HW Floating Point Unit (FPU)",
+            "Memory Protection Unit (MPU) with 16 zones",
+            "DSP Instructions, Thumb®-2 Instruction Set",
+            "Embedded Trace Module (ETM) with instruction trace stream, including Trace Port Interface Unit (TPIU)"
+          ],
+          "Memories": [
+            "Up to 2048 Kbytes embedded Flash with unique identifier and user signature for user-defined data",
+            "Up to 384 Kbytes embedded Multi-port SRAM",
+            "Tightly Coupled Memory (TCM) interface with four configurations (disabled, 2 x 32 Kbytes, 2 x 64 Kbytes, 2 x 128 Kbytes)",
+            "16 Kbytes ROM with embedded Boot Loader routines (UART0, USB) and IAP routines",
+            "16-bit Static Memory Controller (SMC) with support for SRAM, PSRAM, LCD module, NOR and NAND Flash with on-the-fly scrambling",
+            "16-bit SDRAM Controller (SDRAMC) interfacing up to 256 MB and with on-the-fly scrambling"
+          ],
+          "System": [
+            "Embedded voltage regulator for single-supply operation",
+            "Power-on-Reset (POR), Brown-out Detector (BOD) and Dual Watchdog for safe operation",
+            "Quartz or ceramic resonator oscillators: 3 to 20 MHz main oscillator with failure detection, 12 MHz or 16 MHz needed for USB operations. Optional low-power 32.768 kHz for RTC or device clock",
+            "RTC with Gregorian calendar mode, waveform generation in low-power modes",
+            "RTC counter calibration circuitry compensates for 32.768 kHz crystal frequency variations",
+            "32-bit low-power Real-time Timer (RTT)",
+            "High-precision 4/8/12 MHz internal RC oscillator with 4 MHz default frequency for device startup. In-application trimming access for frequency adjustment. 8/12 MHz are factory-trimmed.",
+            "32.768 kHz crystal oscillator or embedded 32 kHz (typical) RC oscillator as source of low-power mode device clock (SLCK)",
+            "One 500 MHz PLL for system clock, one 480 MHz PLL for USB high-speed operations",
+            "Temperature Sensor",
+            "One dual-port 24-channel central DMA Controller (XDMAC)"
+          ],
+          "Low-Power Features": [
+            "Low-power Sleep, Wait and Backup modes, with typical power consumption down to 1.1 µA in Backup mode with RTC, RTT and wake-up logic enabled",
+            "Ultra-low-power RTC and RTT",
+            "1 Kbyte of backup RAM (BRAM) with dedicated regulator"
+          ],
+          "Peripherals": [
+            "One Ethernet MAC (GMAC) 10/100 Mbps in MII mode and RMII with dedicated DMA. IEEE1588 PTP frames and 802.3az Energy-efficiency support. Ethernet AVB support with IEEE802.1AS Time-stamping and IEEE802.1Qav credit-based traffic-shaping hardware support.",
+            "USB 2.0 Device/Mini Host High-speed (USBHS) at 480 Mbps, 4-Kbyte FIFO, up to 10 bidirectional endpoints, dedicated DMA",
+            "12-bit ITU-R BT. 601/656 Image Sensor Interface (ISI)",
+            "Two master Controller Area Networks (MCAN) with Flexible Data Rate (CAN-FD) with SRAM-based mailboxes, time- and event-triggered transmission",
+            "Three USARTs. USART0/1/2 support LIN mode, ISO7816, IrDA®, RS-485, SPI, Manchester and Modem modes; USART1 supports LON mode.",
+            "Five 2-wire UARTs with SleepWalking support",
+            "Three Two-Wire Interfaces (TWIHS) (I2 C-compatible) with SleepWalking support",
+            "Quad I/O Serial Peripheral Interface (QSPI) interfacing up to 256 MB Flash and with eXecute-In-Place and onthe-fly scrambling",
+            "Two Serial Peripheral Interfaces (SPI)",
+            "One Serial Synchronous Controller (SSC) with I2S and TDM support",
+            "Two Inter-IC Sound Controllers (I2SC)",
+            "One High-speed Multimedia Card Interface (HSMCI) (SDIO/SD Card/e.MMC)",
+            "Four Three-Channel 16-bit Timer/Counters (TC) with Capture, Waveform, Compare and PWM modes, constant on time. Quadrature decoder logic and 2-bit Gray Up/Down Counter for stepper motor",
+            "Two 4-channel 16-bit PWMs with complementary outputs, Dead Time Generator and eight fault inputs per PWM for motor control, two external triggers to manage power factor correction (PFC), DC-DC and lighting control.",
+            "Two Analog Front-End Controllers (AFEC), each supporting up to 12 channels with differential input mode and programmable gain stage, allowing dual sample-and-hold at up to 2 Msps. Gain and offset error autotest feature.",
+            "One 2-channel 12-bit 1Msps-per-channel Digital-to-Analog Controller (DAC) with differential and oversampling modes",
+            "One Analog Comparator (ACC) with flexible input selection, selectable input hysteresis"
+          ],
+          "Cryptography": [
+            "True Random Number Generator (TRNG)",
+            "AES: 256-, 192-, 128-bit Key Algorithm, Compliant with FIPS PUB-197 Specifications",
+            "Integrity Check Monitor (ICM). Supports Secure Hash Algorithm SHA1, SHA224 and SHA256"
+          ]
+        }
+      },
       "quantity": "50000",
       "date": "09 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -13,7 +74,51 @@
     {
       "id": "20a76d676ace80d6be309a4a33c518cb77f98fc27a62b54cf4b552bec36fac13",
       "previusTx": "",
-      "asset": " LPC1768FBD100",
+      "asset": {
+        "name": "LPC1768",
+        "features": [
+          "ARM Cortex-M3 processor, running at frequencies of up to 100 MHz",
+          "ARM Cortex-M3 built-in Nested Vectored Interrupt Controller (NVIC)",
+          "Up to 512 kB on-chip flash programming memory",
+          "Up to 64 kB On-chip SRAM",
+          "In-System Programming (ISP) and In-Application Programming (IAP)",
+          "Eight channel General Purpose DMA controller (GPDMA)",
+          "Ethernet MAC with RMII interface and dedicated DMA controller",
+          "USB 2.0 full-speed device/Host/OTG controller",
+          "Four UARTs with fractional baud rate generation, internal FIFO, and DMA support",
+          "CAN 2.0B controller with two channels",
+          "SPI controller with synchronous, serial, full duplex communication",
+          "Two SSP controllers with FIFO and multi-protocol capabilities",
+          "Three enhanced I2C bus interfaces",
+          "I2S (Inter-IC Sound) interface",
+          "70 General Purpose I/O (GPIO) pins with configurable pull-up/down resistors",
+          "12-bit/8-ch Analog/Digital Converter (ADC) with conversion rates up to 200 kHz",
+          "10-bit Digital/Analog Converter (DAC) with dedicated conversion timer and DMA",
+          "Four general purpose timers/counters",
+          "One motor control PWM with support for three-phase motor control",
+          "Quadrature encoder interface that can monitor one external quadrature encoder",
+          "One standard PWM/timer block with external count input",
+          "Low power RTC with a separate power domain and dedicated oscillator",
+          "WatchDog Timer (WDT)",
+          "ARM Cortex-M3 system tick timer, including an external clock input option",
+          "Repetitive interrupt timer provides programmable and repeating timed interrupts",
+          "Each peripheral has its own clock divider for further power savings",
+          "Standard JTAG test/debug interface for compatibility with existing tools",
+          "Integrated PMU (Power Management Unit)",
+          "Four reduced power modes: Sleep, Deep-sleep, Power-down, and Deep power-down",
+          "Single 3.3 V power supply (2.4 V to 3.6 V)",
+          "Four external interrupt inputs configurable as edge/level sensitive",
+          "Non-maskable Interrupt (NMI) input",
+          "Wake-up Interrupt Controller (WIC)",
+          "Processor wake-up from Power-down mode via any interrupt",
+          "Brownout detect with separate threshold for interrupt and forced reset",
+          "Power-On Reset (POR)",
+          "Crystal oscillator with an operating range of 1 MHz to 25 MHz",
+          "4 MHz internal RC oscillator trimmed to 1 % accuracy",
+          "Code Read Protection (CRP) with different security levels",
+          "Unique device serial number for identification purposes"
+        ]
+      },
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -22,7 +127,24 @@
     {
       "id": "525905d3363ebdeb83dfb93fd9aee1c44f54428d9848b0add6cfdc629f6a94cd",
       "previusTx": "",
-      "asset": "SI5324D-C-GM-ND",
+      "asset": {
+        "name": "SI5324",
+        "features": [
+          "Generates any frequency from 2 kHz to 945 MHz and select frequencies to 1.4 GHz from an input frequency of 2 kHz to 710 MHz",
+          "Ultra-low jitter clock outputs as low as 290 fs rms (12 kHz–20 MHz), 320 fs rms (50 kHz–80 MHz)",
+          "Integrated loop filter with selectable loop bandwidth (4– 525 Hz)",
+          "Meets ITU-T G.8251 and Telcordia GR-253-CORE jitter specification",
+          "Hitless input clock switching with phase build-out",
+          "Freerun, Digital Hold operation",
+          "Configurable signal format per output (LVPECL, LVDS, CML, CMOS)",
+          "Support for ITU G.709 and custom FEC ratios (255/238, 255/237, 255/236, 239/237, 66/64, 239/238, 15/14, 253/221, 255/238)",
+          "LOL, LOS, FOS alarm outputs",
+          "I2C or SPI programmable",
+          "On-chip voltage regulator with high PSNR",
+          "Single supply 1.8 ±5%, 2.5 ±10%, or 3.3 V ±10%",
+          "Small size: 6 x 6 mm 36-lead QFN"
+        ]
+      },
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -31,7 +153,20 @@
     {
       "id": "73b1eafb17663c4cd27632c6770624dfba75f2328e4641888df082d036d4fb6e",
       "previusTx": "",
-      "asset": "SI570",
+      "asset": {
+        "name": "SI570",
+        "features": [
+          "Any programmable output frequencies from 10 to 945 MHz and select frequencies to 1.4 GHz",
+          "I2C serial interface",
+          "3rd generation DSPLL® with superior jitter performance",
+          "3x better frequency stability than SAW-based oscillators",
+          "Internal fixed crystal frequency ensures high reliability and low aging",
+          "Available LVPECL, CMOS, LVDS, and CML outputs",
+          "Industry-standard 5x7 mm package",
+          "Pb-free/RoHS-compliant",
+          "1.8, 2.5, or 3.3 V supply"
+        ]
+      },
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -40,7 +175,55 @@
     {
       "id": "faf7a526bdada313cc9d3b251110e8a82ca9910d0af6c064a41ba83be4364d33",
       "previusTx": "",
-      "asset": "PIC18f4550",
+      "asset": {
+        "name": "PIC18f4550",
+        "features": {
+          "High-Performance RISC CPU": [
+            "Source code compatiable with the PIC16 and PIC17 instruction sets",
+            "USB V2.0 Compliant with up to 12 Mb/s at Full Speed",
+            "DC - 48 MHz External Clock Modes",
+            "16-bit wide instructions, 8-bit wide data path",
+            "Priority levels for interrupts",
+            "8 x 8 Single Cycle Hardware Multiplier",
+            "16 kBytes Flash Program Memory",
+            "2048 Byte RAM Data Memory",
+            "256 Byte EEPROM Data Memory"
+          ],
+          "Peripheral Features": [
+            "High current sink/source 25mA/25mA",
+            "Three 16-bit timer/counters",
+            "One 8-bit timer/counter with prescaler",
+            "Two Capture/Compare Modules",
+            "Capture 16-bit, max. resolution 6.25ns(TCY/16)",
+            "Compare 16-bit, max. resolution 100ns",
+            "3-wire SPI (supports all 4 SPI modes)",
+            "I²C Master and Slave mode",
+            "Addressable USART Module",
+            "Thirteen Channel 10-bit Analog-to-Digital Converter"
+          ],
+          "Special Microcontroller Features": [
+            "Power-On Reset",
+            "Power-up Timer (PWRT) and Oscillator Start-Up Timer (OST)",
+            "1,000 erase/write cycls Enhanced Flash Program Memory",
+            "1,000,000 typical erase/write cycles EEPROM Data Memory",
+            "Watchdog Timer (WDT) with its own On-Chip RC oscillator",
+            "Programmable code protection",
+            "Power saving SLEEP mode",
+            "Secondary Oscillator (32kHz) clock input",
+            "Single supply 5V In-circuit Serial Programming via two pins",
+            "In-Circuit Debug (ICD)"
+          ],
+          "CMOS Technology": [
+            "Low power, high speed CMOS FLASH technology",
+            "Fully Static Design",
+            "Wide Operating Voltage Range (2.0V to 5.5V)"
+          ],
+          "I/O and Packages": [
+            "35 I/O pins with individual direction control",
+            "40-pin DIP"
+          ]
+        }
+      },
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -49,25 +232,93 @@
     {
       "id": "03d3d8f9e123eb651f5379ec9c2935d014aa9958cce91fd1dd8a0f9520e15e54",
       "previusTx": "",
-      "asset": "MAX232AESE",
+      "asset": {
+        "name": "MAX232",
+        "features": [
+          "Meets or Exceeds TIA/EIA-232-F and ITU Recommendation V.28",
+          "Operates From a Single 5-V Power Supply With 1.0-F Charge-Pump Capacitors",
+          "Operates Up To 120 kbit/s",
+          "Two Drivers and Two Receivers",
+          "±30-V Input Levels",
+          "Low Supply Current… 8 mA Typical",
+          "ESD Protection Exceeds JESD 22 − 2000-V Human-Body Model (A114-A)"
+        ]
+      },
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
       "to": "1Huky74UcCnAnf5v5yHRF2Jt87eYy16X8f"
     },
-
-
-
     {
       "id": "fdc20ba4ea48e8be3daaf689498783a1e2d901daa432d2772495d29ac61ce511",
       "previusTx": "",
-      "asset": "ATSAME70Q21",
+      "asset": {
+        "name": "Atmel E70",
+        "features": {
+          "Core": [
+            "ARM Cortex-M7 running at up to 300 MHz(1)",
+            "16 Kbytes of ICache and 16 Kbytes of DCache with Error Code Correction (ECC)",
+            "Simple- and double-precision HW Floating Point Unit (FPU)",
+            "Memory Protection Unit (MPU) with 16 zones",
+            "DSP Instructions, Thumb®-2 Instruction Set",
+            "Embedded Trace Module (ETM) with instruction trace stream, including Trace Port Interface Unit (TPIU)"
+          ],
+          "Memories": [
+            "Up to 2048 Kbytes embedded Flash with unique identifier and user signature for user-defined data",
+            "Up to 384 Kbytes embedded Multi-port SRAM",
+            "Tightly Coupled Memory (TCM) interface with four configurations (disabled, 2 x 32 Kbytes, 2 x 64 Kbytes, 2 x 128 Kbytes)",
+            "16 Kbytes ROM with embedded Boot Loader routines (UART0, USB) and IAP routines",
+            "16-bit Static Memory Controller (SMC) with support for SRAM, PSRAM, LCD module, NOR and NAND Flash with on-the-fly scrambling",
+            "16-bit SDRAM Controller (SDRAMC) interfacing up to 256 MB and with on-the-fly scrambling"
+          ],
+          "System": [
+            "Embedded voltage regulator for single-supply operation",
+            "Power-on-Reset (POR), Brown-out Detector (BOD) and Dual Watchdog for safe operation",
+            "Quartz or ceramic resonator oscillators: 3 to 20 MHz main oscillator with failure detection, 12 MHz or 16 MHz needed for USB operations. Optional low-power 32.768 kHz for RTC or device clock",
+            "RTC with Gregorian calendar mode, waveform generation in low-power modes",
+            "RTC counter calibration circuitry compensates for 32.768 kHz crystal frequency variations",
+            "32-bit low-power Real-time Timer (RTT)",
+            "High-precision 4/8/12 MHz internal RC oscillator with 4 MHz default frequency for device startup. In-application trimming access for frequency adjustment. 8/12 MHz are factory-trimmed.",
+            "32.768 kHz crystal oscillator or embedded 32 kHz (typical) RC oscillator as source of low-power mode device clock (SLCK)",
+            "One 500 MHz PLL for system clock, one 480 MHz PLL for USB high-speed operations",
+            "Temperature Sensor",
+            "One dual-port 24-channel central DMA Controller (XDMAC)"
+          ],
+          "Low-Power Features": [
+            "Low-power Sleep, Wait and Backup modes, with typical power consumption down to 1.1 µA in Backup mode with RTC, RTT and wake-up logic enabled",
+            "Ultra-low-power RTC and RTT",
+            "1 Kbyte of backup RAM (BRAM) with dedicated regulator"
+          ],
+          "Peripherals": [
+            "One Ethernet MAC (GMAC) 10/100 Mbps in MII mode and RMII with dedicated DMA. IEEE1588 PTP frames and 802.3az Energy-efficiency support. Ethernet AVB support with IEEE802.1AS Time-stamping and IEEE802.1Qav credit-based traffic-shaping hardware support.",
+            "USB 2.0 Device/Mini Host High-speed (USBHS) at 480 Mbps, 4-Kbyte FIFO, up to 10 bidirectional endpoints, dedicated DMA",
+            "12-bit ITU-R BT. 601/656 Image Sensor Interface (ISI)",
+            "Two master Controller Area Networks (MCAN) with Flexible Data Rate (CAN-FD) with SRAM-based mailboxes, time- and event-triggered transmission",
+            "Three USARTs. USART0/1/2 support LIN mode, ISO7816, IrDA®, RS-485, SPI, Manchester and Modem modes; USART1 supports LON mode.",
+            "Five 2-wire UARTs with SleepWalking support",
+            "Three Two-Wire Interfaces (TWIHS) (I2 C-compatible) with SleepWalking support",
+            "Quad I/O Serial Peripheral Interface (QSPI) interfacing up to 256 MB Flash and with eXecute-In-Place and onthe-fly scrambling",
+            "Two Serial Peripheral Interfaces (SPI)",
+            "One Serial Synchronous Controller (SSC) with I2S and TDM support",
+            "Two Inter-IC Sound Controllers (I2SC)",
+            "One High-speed Multimedia Card Interface (HSMCI) (SDIO/SD Card/e.MMC)",
+            "Four Three-Channel 16-bit Timer/Counters (TC) with Capture, Waveform, Compare and PWM modes, constant on time. Quadrature decoder logic and 2-bit Gray Up/Down Counter for stepper motor",
+            "Two 4-channel 16-bit PWMs with complementary outputs, Dead Time Generator and eight fault inputs per PWM for motor control, two external triggers to manage power factor correction (PFC), DC-DC and lighting control.",
+            "Two Analog Front-End Controllers (AFEC), each supporting up to 12 channels with differential input mode and programmable gain stage, allowing dual sample-and-hold at up to 2 Msps. Gain and offset error autotest feature.",
+            "One 2-channel 12-bit 1Msps-per-channel Digital-to-Analog Controller (DAC) with differential and oversampling modes",
+            "One Analog Comparator (ACC) with flexible input selection, selectable input hysteresis"
+          ],
+          "Cryptography": [
+            "True Random Number Generator (TRNG)",
+            "AES: 256-, 192-, 128-bit Key Algorithm, Compliant with FIPS PUB-197 Specifications",
+            "Integrity Check Monitor (ICM). Supports Secure Hash Algorithm SHA1, SHA224 and SHA256"
+          ]
+        }
+      },
       "quantity": "50000",
       "date": "02 nov 2016",
       "from": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd",
       "to": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS"
     }
-
-
   ]
 }

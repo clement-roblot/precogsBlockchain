@@ -154,3 +154,32 @@ function pathToHere(bctransaction){
 
     return path;
 }
+
+function getAsset(data) {
+	var str = "";
+	$.each( data, function( key, value ) {
+		if( key != 'name' ) {
+			str+=  '<p><strong>' + key.toUpperCase() + '</strong>'+'</p>' ;
+			str +=tree(value);
+		}
+	});
+	return str;
+}
+
+function tree(data) {    
+	var str = '';
+	if ( Object.prototype.toString.call(data) === '[object Array]' ) { 
+		str = '<ul>';
+		for (var i in data) {            
+			str += '<li>'+data[i]+'</li>';         
+		}   
+		str += '</ul>';		
+		return str;
+	} else {
+		$.each( data, function( key1, value1 ) {
+			str += '<p><strong>'+key1+'</strong></p>';
+			str += tree(value1);
+		});
+		return str;
+	}
+}
