@@ -129,8 +129,14 @@ function pathToHere(bctransaction){
         else
             newElement = companieFrom.name;
 
+        //newElement += "<div class=\"container\">"
+        newElement += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"glyphicon glyphicon-arrow-right\" data-toggle=\"tooltip\" title=\"Verified the "+currentTransaction.date+"\"></span> ";
+        newElement += " <span class=\"badge badge-verified\"><span class=\"glyphicon glyphicon-ok\"></span></span> ";
+        //newElement += "</div>"
 
-        newElement += " <span class=\"glyphicon glyphicon-arrow-right\" data-toggle=\"tooltip\" title=\""+currentTransaction.date+"\"></span> ";
+        
+
+
 
         path = newElement + path;
 
