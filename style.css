@@ -29,6 +29,9 @@ html,body {
 
   /*animation: pulse 5s infinite;*/
   /*transition: all 1s ease-in-out;*/
+
+  font-size: 20px;
+
 }
 
 @keyframes pulse {

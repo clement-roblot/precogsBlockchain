@@ -4,7 +4,7 @@
     {
       "id": "76aa18218d5df9fdac106cfac243aba021432f7f7b7e4b75b421ea53836d8bfc",
       "previusTx": "fdc20ba4ea48e8be3daaf689498783a1e2d901daa432d2772495d29ac61ce511",
-      "asset": "Atmel E70",
+      "asset": "ATSAME70Q21",
       "quantity": "50000",
       "date": "09 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -13,7 +13,7 @@
     {
       "id": "20a76d676ace80d6be309a4a33c518cb77f98fc27a62b54cf4b552bec36fac13",
       "previusTx": "",
-      "asset": "LPC1768",
+      "asset": " LPC1768FBD100",
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -22,7 +22,7 @@
     {
       "id": "525905d3363ebdeb83dfb93fd9aee1c44f54428d9848b0add6cfdc629f6a94cd",
       "previusTx": "",
-      "asset": "SI5324",
+      "asset": "SI5324D-C-GM-ND",
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -49,7 +49,7 @@
     {
       "id": "03d3d8f9e123eb651f5379ec9c2935d014aa9958cce91fd1dd8a0f9520e15e54",
       "previusTx": "",
-      "asset": "MAX232",
+      "asset": "MAX232AESE",
       "quantity": "50000",
       "date": "07 nov 2016",
       "from": "14eExeeJxHW4VAjSfc37hVdVH1E6gCZcPS",
@@ -61,7 +61,7 @@
     {
       "id": "fdc20ba4ea48e8be3daaf689498783a1e2d901daa432d2772495d29ac61ce511",
       "previusTx": "",
-      "asset": "Atmel E70",
+      "asset": "ATSAME70Q21",
       "quantity": "50000",
       "date": "02 nov 2016",
       "from": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd",
