@@ -6,6 +6,7 @@ var publicKey = ""
 var precogsTransactions;
 var blockChainTransactions;
 var blockChainAutentification;
+var assetsFeatures;
 
 function initApp(){
 
@@ -36,6 +37,13 @@ function initApp(){
         blockChainAutentification = data.companies;
 
         //alert( "kikoo " + JSON.stringify(blockChainAutentification) ) ;
+    });
+
+
+    $.getJSON( "data/assetsFeatures.json", function( data ) {
+
+        assetsFeatures = data.features;
+		
     });
 }
 
@@ -155,15 +163,17 @@ function pathToHere(bctransaction){
     return path;
 }
 
-function getAsset(data) {
-	var str = "";
-	$.each( data, function( key, value ) {
-		if( key != 'name' ) {
-			str+=  '<p><strong>' + key.toUpperCase() + '</strong>'+'</p>' ;
-			str +=tree(value);
+function getAsset(ref) {
+
+	var str = '';
+	$.each( assetsFeatures, function( name, data ) {
+		if( ref == name ) {
+			str += '<p><strong>Features</strong>'+'</p>' ;
+			str += tree(data);		
 		}
 	});
 	return str;
+	
 }
 
 function tree(data) {    
