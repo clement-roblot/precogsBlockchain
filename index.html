@@ -66,11 +66,6 @@ window.onload = function() {
 
     initApp();
 
-
-
-
-
-
     /*$("#addressPublic").val(getPublicKey());
     $("#addressPrivate").val(getPrivateKey());*/
 
@@ -91,9 +86,29 @@ window.onload = function() {
           var bctransaction = getblockChainTransactionById( transaction.blockChainTransactions[i] );
 
           var tr="<tr>";
-          var td1="<td>"+bctransaction.asset+"</td>";
+          var td1="<td><a href='#' data-toggle='modal' data-target='#"+bctransaction.id+"' >"+bctransaction.asset.name+"</a></td>";
           var td2="<td  align=\"left\">"+pathToHere(bctransaction)+"</td>";
           var trend="</tr>";
+		  
+		  var modal = '<div class="modal fade" id="'+bctransaction.id+'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">\
+					  <div class="modal-dialog" role="document">\
+						<div class="modal-content">\
+						  <div class="modal-header">\
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">\
+							  <span aria-hidden="true">&times;</span>\
+							</button>\
+							<h4 class="modal-title" id="myModalLabel">'+bctransaction.asset.name+'</h4>\
+						  </div>\
+						  <div class="modal-body">'+
+							getAsset(bctransaction.asset)+
+							'</div>\
+						  <div class="modal-footer">\
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\
+						  </div>\
+						</div>\
+					  </div>\
+					</div>';
+          $("body").append(modal);
 
           $("#transactionTable").append(tr+td1+td2+trend);
           $("#transactionDetails").removeClass('hidden');
