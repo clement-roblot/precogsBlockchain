@@ -14,6 +14,24 @@
       "name": "Microchip",
       "bcAddress": "1BpZrQti39M1VNLvTAYwo3WRep3oacUjBd",
       "icon": "http://logos-download.com/wp-content/uploads/2016/09/Microchip_logo.png"
+    },
+    {
+      "name": "Arrow",
+      "bcAddress": "126LWM1yWdDsRuEZCVzoimHuF3YiENzaz1",
+      "icon": "http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Arrow-Electronics-Logo-PNG-Transparent.png"
+    },
+    {
+      "name": "Future electronics",
+      "bcAddress": "136PqkWb4VbsCDwi8gLTUm6GhuSgJWtPFU",
+      "icon": "http://www.summitdata.com/blog/wp-content/uploads/2014/10/Future-Connectivity-2.jpg"
+    },
+    {
+      "name": "Digi-Key",
+      "bcAddress": "19govWMzsRXqLUsUrHQKQ3DzekRxhsqwWH",
+      "icon": "http://www.wiznet.co.kr/wp-content/uploads/2015/03/Digi-Key-Logo-PNG-Large-High-Res-Transparent-600.png"
     }
+
+
+    
   ]
 }

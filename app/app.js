@@ -125,7 +125,7 @@ function pathToHere(bctransaction){
 
         var newElement = "";
         if (companieFrom.icon != "" )
-            newElement = "<img class=\"companieIcon\" src=\""+companieFrom.icon+"\"></img>";
+            newElement = "<img class=\"companieIcon\" src=\""+companieFrom.icon+"\" alt=\""+companieFrom.name+"\"></img>";
         else
             newElement = companieFrom.name;
 
