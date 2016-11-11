@@ -76,12 +76,13 @@ window.onload = function() {
 
       transaction = getPrecogsTransactionById( $("#transactionNumber").val() );
 
+      $("#transactionTable tr").remove();
+
       if( transaction != null )
       {
         //alert("kikoo " + $("#transactionNumber").val() );
         //alert( transaction.content )
 
-        $("#transactionTable tr").remove();
         $("#transactionTable").append("<tr><th>Chip</th><th>Historic</th></tr>");
 
         for(var i=0; i<transaction.blockChainTransactions.length; i++ ){
@@ -114,10 +115,15 @@ window.onload = function() {
           $("body").append(modal);
 
           $("#transactionTable").append(tr+td1+td2+trend);
-          $("#transactionDetails").removeClass('hidden');
           $('[data-toggle="tooltip"]').tooltip();
         }
       }
+      else
+      {
+        $("#transactionTable").append("<tr><td align=\"center\">Sorry your transaction number doesn't seams to be existing. Maybe try this one : 457852264485256561252454.</td></tr>");
+      }
+
+      $("#transactionDetails").removeClass('hidden');
 
     })
 
